@@ -79,8 +79,8 @@
 - (void)didReceiveFaces:(NSArray <NSArray<FaceMeshIOSLibFaceLandmarkPoint *>*>*)faces {
     /*
     // Mediapipe Facepoint map: https://github.com/google/mediapipe/blob/a908d668c730da128dfa8d9f6bd25d519d006692/mediapipe/modules/face_geometry/data/canonical_face_model_uv_visualization.png
+     
     NSDictionary *mapDic = @{@"159": @"3.2",
-                             @"159": @"3.2",
                              @"145": @"3.4",
                              @"155": @"3.8",
                              @"130": @"3.12",
@@ -94,10 +94,14 @@
                              @"0": @"8.1",
                              @"17": @"8.2",
                              @"57": @"8.4",
-                             @"287": @"8.3"
-    };
+                             @"287": @"8.3"};
+     
+     NSString *NOSE_TIP_POINT = @"5";
+     NSString *LEFT_FOREHEAD_POINT = @"337";
+     NSString *LIP_LOWER_PART_POINT = @"18";
+     NSString *LEFT_CHEEK_POINT = @"432";
     */
-    
+
     dispatch_async(dispatch_get_main_queue(), ^{
         FaceMeshIOSLibFaceLandmarkPoint *point = faces[0][4];
         NSLog(@"nose point: x:%f, y:%f", point.x, point.y);
